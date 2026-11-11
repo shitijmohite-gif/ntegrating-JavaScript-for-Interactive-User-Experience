@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frontend Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of a Frontend Web Developer: skills, projects and contact.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="logo">Dev<span>Folio</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Switch to light mode">☀️</button>
+        <button id="menuToggle" class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Home ===== -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <p class="hero-greet">Hi, I'm a Frontend Web Developer.</p>
+        <h1>I build <span id="typed" aria-live="off"></span><span class="cursor" aria-hidden="true">|</span></h1>
+        <p class="hero-text">I turn designs into fast, accessible and responsive websites using HTML, CSS and JavaScript.</p>
+        <div class="hero-btns">
+          <button id="resumeBtn" class="btn btn-primary" type="button">Download Resume</button>
+          <a href="#projects" class="btn btn-outline">View My Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section reveal">
+      <div class="container about-grid">
+        <div class="about-img">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Profile illustration">
+            <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+            <rect width="200" height="200" rx="24" fill="url(#g)"/>
+            <circle cx="100" cy="78" r="36" fill="#fff" opacity=".92"/>
+            <path d="M32 190c6-44 36-66 68-66s62 22 68 66z" fill="#fff" opacity=".92"/>
+          </svg>
+        </div>
+        <div>
+          <h2 class="section-title">About Me</h2>
+          <p>I'm a Frontend Web Developer who enjoys building clean, user-friendly interfaces and learning new web technologies.</p>
+          <div id="moreText" class="more-text" hidden>
+            <p><strong>Education:</strong> B.Sc. in Information Technology (2022 – 2025), with coursework in web development, databases and software engineering.</p>
+            <p><strong>Technical background:</strong> I have built responsive websites, interactive UIs and small JavaScript apps. I work with Git, browser DevTools and Figma, and care about accessibility and performance.</p>
+            <p><strong>Currently:</strong> deepening my JavaScript knowledge and looking for a frontend internship.</p>
+          </div>
+          <button id="readMoreBtn" class="btn btn-primary" type="button" aria-expanded="false" aria-controls="moreText">Read More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2 class="section-title center">My Skills</h2>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><div class="skill-head"><h3>HTML5</h3><span>95%</span></div><div class="bar" role="progressbar" aria-label="HTML5" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"><div class="bar-fill" data-level="95"></div></div></article>
+          <article class="skill-card reveal"><div class="skill-head"><h3>CSS3</h3><span>90%</span></div><div class="bar" role="progressbar" aria-label="CSS3" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><div class="bar-fill" data-level="90"></div></div></article>
+          <article class="skill-card reveal"><div class="skill-head"><h3>JavaScript</h3><span>85%</span></div><div class="bar" role="progressbar" aria-label="JavaScript" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><div class="bar-fill" data-level="85"></div></div></article>
+          <article class="skill-card reveal"><div class="skill-head"><h3>Bootstrap</h3><span>80%</span></div><div class="bar" role="progressbar" aria-label="Bootstrap" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><div class="bar-fill" data-level="80"></div></div></article>
+          <article class="skill-card reveal"><div class="skill-head"><h3>Git &amp; GitHub</h3><span>75%</span></div><div class="bar" role="progressbar" aria-label="Git and GitHub" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><div class="bar-fill" data-level="75"></div></div></article>
+          <article class="skill-card reveal"><div class="skill-head"><h3>Responsive Design</h3><span>90%</span></div><div class="bar" role="progressbar" aria-label="Responsive Design" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><div class="bar-fill" data-level="90"></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title center">Projects</h2>
+        <div class="filters" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="html-css" aria-pressed="false">HTML &amp; CSS</button>
+          <button class="filter-btn" type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
+          <button class="filter-btn" type="button" data-filter="bootstrap" aria-pressed="false">Bootstrap</button>
+        </div>
+        <p id="emptyMsg" class="empty" hidden>No projects in this category yet.</p>
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card" data-category="html-css" data-title="Landing Page" data-desc="A responsive product landing page built with semantic HTML5, CSS Grid and Flexbox. Includes a sticky header and mobile-first layout.">
+            <div class="project-img p1" aria-hidden="true">🎨</div>
+            <div class="project-body"><h3>Landing Page</h3><p>Responsive product page using CSS Grid and Flexbox.</p><button class="btn btn-sm view-btn" type="button">View Project</button></div>
+          </article>
+          <article class="project-card" data-category="javascript" data-title="To-Do App" data-desc="A task manager that adds, completes, filters and deletes tasks. Uses DOM manipulation, event delegation and localStorage.">
+            <div class="project-img p2" aria-hidden="true">✅</div>
+            <div class="project-body"><h3>To-Do App</h3><p>Add, complete and delete tasks with saved state.</p><button class="btn btn-sm view-btn" type="button">View Project</button></div>
+          </article>
+          <article class="project-card" data-category="bootstrap" data-title="Business Website" data-desc="A multi-section business site built with Bootstrap 5: responsive navbar, card layouts, and a contact form.">
+            <div class="project-img p3" aria-hidden="true">🏢</div>
+            <div class="project-body"><h3>Business Website</h3><p>Bootstrap 5 site with navbar, cards and forms.</p><button class="btn btn-sm view-btn" type="button">View Project</button></div>
+          </article>
+          <article class="project-card" data-category="javascript" data-title="Weather Dashboard" data-desc="Search a city and see the forecast. Fetches data from a public weather API and updates the page dynamically.">
+            <div class="project-img p4" aria-hidden="true">⛅</div>
+            <div class="project-body"><h3>Weather Dashboard</h3><p>Fetches live forecasts and renders them dynamically.</p><button class="btn btn-sm view-btn" type="button">View Project</button></div>
+          </article>
+          <article class="project-card" data-category="html-css" data-title="Restaurant Menu" data-desc="A visually rich restaurant menu page with CSS animations, hover effects and a print-friendly layout.">
+            <div class="project-img p5" aria-hidden="true">🍽️</div>
+            <div class="project-body"><h3>Restaurant Menu</h3><p>Animated menu page with hover effects.</p><button class="btn btn-sm view-btn" type="button">View Project</button></div>
+          </article>
+          <article class="project-card" data-category="bootstrap" data-title="Admin Dashboard" data-desc="A dashboard template with a collapsible sidebar, stat cards and tables, built with Bootstrap utilities.">
+            <div class="project-img p6" aria-hidden="true">📊</div>
+            <div class="project-body"><h3>Admin Dashboard</h3><p>Sidebar, stat cards and tables in Bootstrap.</p><button class="btn btn-sm view-btn" type="button">View Project</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section alt">
+      <div class="container contact-wrap">
+        <h2 class="section-title center">Contact Me</h2>
+        <form id="contactForm" class="form" novalidate>
+          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" aria-describedby="nameErr"><small class="error" id="nameErr" role="alert"></small></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" aria-describedby="emailErr"><small class="error" id="emailErr" role="alert"></small></div>
+          <div class="field"><label for="subject">Subject</label><input id="subject" name="subject" type="text" aria-describedby="subjectErr"><small class="error" id="subjectErr" role="alert"></small></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" aria-describedby="messageErr"></textarea><small class="error" id="messageErr" role="alert"></small></div>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> DevFolio. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <button id="backToTop" class="to-top" type="button" aria-label="Back to top" hidden>↑</button>
+
+  <!-- Project details modal -->
+  <dialog id="projectModal" class="modal" aria-labelledby="modalTitle">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <button id="modalClose" class="btn btn-primary" type="button">Close</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
